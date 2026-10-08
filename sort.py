@@ -10,4 +10,13 @@ print(a)  # [1, 2, 5, 8]
 
 
 
+#is sorted check
+a = [1, 2, 5, 8]
+n = len(a)
+is_sorted = True
+for j in range(n - 1):
+    if a[j] > a[j + 1]:
+        is_sorted = False
+        break
+print(is_sorted)  # True
 
