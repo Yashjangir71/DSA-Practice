@@ -1,8 +1,14 @@
-a=[1,4,2,10,3]
-k=3
-max_sum=0
-for i in range(len(a)-k+1):
-    current_sum=sum(a[i:i+k])
-    if current_sum>max_sum:
-        max_sum=current_sum
-print(max_sum)
+a = [1, 4, 2, 10, 3]
+k = 3
+
+window_sum = 0
+for i in range(k):        # add up the first window
+    window_sum += a[i]
+max_sum = window_sum
+
+for i in range(k, len(a)):            # i = entering position
+    window_sum = window_sum - a[i - k] + a[i]   # drop the back, add the front
+    if window_sum > max_sum:
+        max_sum = window_sum
+
+print(max_sum)  # 16
