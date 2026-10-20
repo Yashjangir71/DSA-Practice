@@ -6,7 +6,7 @@ while j < len(a):
     if a[i] < a[j]:
         a[i] = a[j]
     j += 1
-print(a[i])  # 9
+print(a[i])  
 
 ##second approach
 a=[12, 3, 18, 5]
