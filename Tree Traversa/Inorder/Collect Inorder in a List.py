@@ -1,5 +1,4 @@
 result = []
-
 def inorder(node):
     if node is None:
         return
